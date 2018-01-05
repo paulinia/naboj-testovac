@@ -3,7 +3,9 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
+	"strings"
 )
 
 func main() {
@@ -21,7 +23,6 @@ func main() {
 	}
 
 	defer func() {
-		fmt.Println("D je ", D)
 		fw, _ := os.Create("database.txt")
 		D.writeToFile(bufio.NewWriter(fw))
 		fw.Close()
@@ -67,9 +68,24 @@ loop:
 			if err != nil {
 				break
 			}
-			generated = true
+			fmt.Printf("Napíš bodovanie (počet bodov na prvy, druhý tretí atď submit a za ostatné): ")
+			scoring := make([]int, 0)
+			reader := strings.NewReader(getLine(r))
 
-			C = generateContest(n, bn, []string{typ}, &D)
+			for {
+				var num int
+				_, err := fmt.Fscan(reader, &num)
+				if err == io.EOF {
+					generated = true
+					C = generateContest(n, bn, []string{typ}, scoring, &D)
+					break
+				}
+				if err != nil {
+					fmt.Printf("Wrong format. Try again.\n")
+					break
+				}
+				scoring = append(scoring, num)
+			}
 		case "QUIT":
 			break loop
 		case "START":
@@ -85,11 +101,12 @@ loop:
 				break
 			}
 			C.end()
+			fmt.Printf("Co toto preboha robi?\n")
 			active = false
 			generated = false
-			fmt.Println(C.getScoreboard())
+			C.getScoreboard().show()
 		case "USER":
-			if !active {
+			if !generated {
 				fmt.Printf("There's no contest running\n")
 				break
 			}
@@ -105,7 +122,7 @@ loop:
 			}
 			fmt.Printf("Username: ")
 			name := getLine(r)
-			fmt.Printf("Password ")
+			fmt.Printf("Password: ")
 			password := getLine(r)
 			fmt.Printf("Task id: ")
 			var task int
@@ -125,7 +142,7 @@ loop:
 			}
 			fmt.Printf("Username: ")
 			name := getLine(r)
-			fmt.Printf("Password ")
+			fmt.Printf("Password: ")
 			password := getLine(r)
 			fmt.Printf("Task id: ")
 			var task int

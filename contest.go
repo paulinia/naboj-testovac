@@ -35,7 +35,7 @@ func validContest(p []Problem) bool {
 	return true
 }
 
-func generateContest(n, bp int, typ []string, D *Database) Contest {
+func generateContest(n, bp int, typ []string, scoring []int, D *Database) Contest {
 	dp := make([]Problem, 0)
 	for {
 		dp = D.getProblems(n, typ)
@@ -51,7 +51,7 @@ func generateContest(n, bp int, typ []string, D *Database) Contest {
 		time.Now(),
 		dp,
 		make(map[string]User),
-		make([]int, 0),
+		scoring,
 	}
 }
 
@@ -77,6 +77,7 @@ func (c *Contest) begin() {
 
 func (c *Contest) end() {
 	c.started = false
+	fmt.Printf("WTF")
 }
 
 func (c *Contest) getScoreboard() Scoreboard {
@@ -90,6 +91,8 @@ func (c *Contest) getScoreboard() Scoreboard {
 	sort.Slice(users, func(i, j int) bool {
 		return (c.users[users[i]].points < c.users[users[j]].points)
 	})
+
+	fmt.Println(len(users), " a ", len(scoreboard))
 
 	for i, id := range users {
 		scoreboard[i].name = c.users[id].name
