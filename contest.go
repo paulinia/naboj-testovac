@@ -140,9 +140,11 @@ func (c *Contest) submit(user, password string, id int, sol string) (points int,
 					u.aviable = append(new, new[len(new)-1]+1)
 				}
 				defer fnc()
+				return
 			} else {
 				points = 0
 				er = nil
+				return
 			}
 		}
 	}
