@@ -99,18 +99,21 @@ func (c *Contest) getScoreboard() Scoreboard {
 	return scoreboard
 }
 
-func (c *Contest) show(user string, id int) (string, bool) {
+func (c *Contest) show(user, password string, id int) (string, error) {
+	if sha256.Sum224([]byte(password)) != c.users[user].password {
+		return "", WrongPassword{user}
+	}
 	for _, u := range c.users {
 		if u.name != user {
 			continue
 		}
 		for _, p := range u.aviable {
 			if p == id {
-				return c.problemset[id].statement, true
+				return c.problemset[id].statement, nil
 			}
 		}
 	}
-	return "", false
+	return "", DontHaveAccesError{user, id}
 }
 
 func (c *Contest) submit(user, password string, id int, sol string) (points int, er error) {
