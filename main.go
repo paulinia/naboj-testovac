@@ -33,6 +33,7 @@ func main() {
 		"'START' to start/resume a contest; " +
 		"'END' to end a contest; " +
 		"'USER' to add a user " +
+		"'SHOW' to show a problem; " +
 		"'SUBMIT' to submit a solution and " +
 		"'QUIT' to quit.")
 
@@ -100,6 +101,7 @@ loop:
 		case "SUBMIT":
 			if !active {
 				fmt.Printf("There's no contest running\n")
+				break
 			}
 			fmt.Printf("Username: ")
 			name := getLine(r)
@@ -116,12 +118,31 @@ loop:
 			} else {
 				fmt.Println("Dostal si", p, "bodov.")
 			}
+		case "SHOW":
+			if !active {
+				fmt.Printf("There's no contest running\n")
+				break
+			}
+			fmt.Printf("Username: ")
+			name := getLine(r)
+			fmt.Printf("Password ")
+			password := getLine(r)
+			fmt.Printf("Task id: ")
+			var task int
+			fmt.Sscan(getLine(r), &task)
+			s, er := C.show(name, password, task)
+			if er != nil {
+				fmt.Println(er.Error())
+			} else {
+				fmt.Println(s)
+			}
 		default:
 			fmt.Println("Type 'NEW' to enter new problem; " +
 				"'GEN' to generate new contest; " +
 				"'START' to start/resume a contest; " +
 				"'END' to end a contest; " +
-				"'USER' to add a user " +
+				"'USER' to add a user; " +
+				"'SHOW' to show a problem; " +
 				"'SUBMIT' to submit a solution and " +
 				"'QUIT' to quit.")
 		}
