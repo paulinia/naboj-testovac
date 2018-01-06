@@ -24,7 +24,9 @@ func main() {
 
 	defer func() {
 		fw, _ := os.Create("database.txt")
-		D.writeToFile(bufio.NewWriter(fw))
+		w := bufio.NewWriter(fw)
+		D.writeToFile(w)
+		w.Flush()
 		fw.Close()
 	}()
 
@@ -33,24 +35,46 @@ func main() {
 		"'GEN' to generate new contest; " +
 		"'START' to start/resume a contest; " +
 		"'END' to end a contest; " +
-		"'USER' to add a user " +
-		"'SHOW' to show a problem; " +
+		"'SHOWS' to show a scoreboard; " +
+		"'USER' to add a user; " +
+		"'SHOWP' to show a problem; " +
 		"'SUBMIT' to submit a solution and " +
 		"'QUIT' to quit.")
 
 	var C Contest
 	active, generated := false, false
+	defer func() {
+		if C.n > 0 {
+			fw, _ := os.Create("constest.txt")
+			w := bufio.NewWriter(fw)
+			C.write(w)
+			w.Flush()
+			fw.Close()
+		}
+	}()
 
 loop:
 	for {
 		switch getLine(r) {
 		case "NEW":
+			fmt.Printf("Zadaj zadanie prikladu. Ukonci ho s riadkom 'ENDS'.: ")
+			statement := ""
 			line := getLine(r)
+			for {
+				if line == "ENDS" {
+					break
+				}
+				statement += line
+				line = getLine(r)
+			}
+			fmt.Printf("Zadaj riešenie príkladu: ")
 			var num int
 			res := toResult(getLine(r))
+			fmt.Printf("Zadaj číslo príkladu: ")
 			fmt.Sscan(getLine(r), &num)
+			fmt.Printf("Zadaj typ príkladu [MAT/FYZ]: ")
 			D.addProblem(Problem{
-				line,
+				statement,
 				res,
 				num,
 				getLine(r),
@@ -101,10 +125,17 @@ loop:
 				break
 			}
 			C.end()
-			fmt.Printf("Co toto preboha robi?\n")
 			active = false
-			generated = false
-			C.getScoreboard().show()
+
+			sc := C
+			defer func() {
+				fw, _ := os.Create(fmt.Sprintf("%v.sb", sc.start))
+				w := bufio.NewWriter(fw)
+				sc.getScoreboard().write(w)
+				w.Flush()
+				fw.Close()
+			}()
+			fmt.Printf(C.getScoreboard().String())
 		case "USER":
 			if !generated {
 				fmt.Printf("There's no contest running\n")
@@ -135,7 +166,7 @@ loop:
 			} else {
 				fmt.Println("Dostal si", p, "bodov.")
 			}
-		case "SHOW":
+		case "SHOWP":
 			if !active {
 				fmt.Printf("There's no contest running\n")
 				break
@@ -153,13 +184,20 @@ loop:
 			} else {
 				fmt.Println(s)
 			}
+		case "SHOWS":
+			if !active {
+				fmt.Printf("No contest running!\n")
+				break
+			}
+			fmt.Printf(C.getScoreboard().String())
 		default:
 			fmt.Println("Type 'NEW' to enter new problem; " +
 				"'GEN' to generate new contest; " +
 				"'START' to start/resume a contest; " +
 				"'END' to end a contest; " +
+				"'SHOWS' to show a scoreboard; " +
 				"'USER' to add a user; " +
-				"'SHOW' to show a problem; " +
+				"'SHOWP' to show a problem; " +
 				"'SUBMIT' to submit a solution and " +
 				"'QUIT' to quit.")
 		}

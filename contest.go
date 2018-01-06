@@ -60,12 +60,11 @@ func (c *Contest) addUser(name string, password string) {
 		name,
 		sha256.Sum224([]byte(password)),
 		0,
-		make([]bool, c.n),
 		make([]int, c.beginP),
 		make([]Submit, 0),
 	}
 	for i := 0; i < c.beginP; i++ {
-		newU.aviable[i] = i
+		newU.avialable[i] = i
 	}
 	c.users[name] = newU
 }
@@ -77,7 +76,6 @@ func (c *Contest) begin() {
 
 func (c *Contest) end() {
 	c.started = false
-	fmt.Printf("WTF")
 }
 
 func (c *Contest) getScoreboard() Scoreboard {
@@ -89,14 +87,14 @@ func (c *Contest) getScoreboard() Scoreboard {
 	}
 
 	sort.Slice(users, func(i, j int) bool {
-		return (c.users[users[i]].points < c.users[users[j]].points)
+		return (c.users[users[i]].points > c.users[users[j]].points)
 	})
-
-	fmt.Println(len(users), " a ", len(scoreboard))
 
 	for i, id := range users {
 		scoreboard[i].name = c.users[id].name
-		scoreboard[i].last = c.users[id].submits[len(c.users[id].submits)-1].t
+		if len(c.users[id].submits) > 0 {
+			scoreboard[i].last = c.users[id].submits[len(c.users[id].submits)-1].t
+		}
 		scoreboard[i].points = c.users[id].points
 	}
 	return scoreboard
@@ -110,7 +108,7 @@ func (c *Contest) show(user, password string, id int) (string, error) {
 		if u.name != user {
 			continue
 		}
-		for _, p := range u.aviable {
+		for _, p := range u.avialable {
 			if p == id {
 				return c.problemset[id].statement, nil
 			}
@@ -126,32 +124,25 @@ func (c *Contest) submit(user, password string, id int, sol string) (points int,
 		return
 	}
 	new := make([]int, 0)
-	for _, u := range c.users {
-		if u.name != user {
+	u := c.users[user]
+	er = CannotSolveError{id}
+
+	for _, p := range c.users[user].avialable {
+		if p != id {
+			new = append(new, p)
 			continue
 		}
-		for _, p := range u.aviable {
-			if p != id {
-				new = append(new, p)
-				continue
+		if c.problemset[p].solved(sol) {
+			points = c.pointValue(id, c.users[user].submits)
+			fnc := func() {
+				u.avialable = append(new, new[len(new)-1]+1)
+				c.users[user] = u
 			}
-			if c.problemset[p].solved(sol) {
-				u.solved[p] = true
-				points = c.pointValue(id, u.submits)
-				er = nil
-				fnc := func() {
-					u.aviable = append(new, new[len(new)-1]+1)
-				}
-				defer fnc()
-				return
-			} else {
-				points = 0
-				er = nil
-				return
-			}
+			defer fnc()
+			u.points += points
+			u.submits = append(u.submits, Submit{time.Now(), id, points})
 		}
+		er = nil
 	}
-	return 0, CannotSolveError{
-		id,
-	}
+	return
 }

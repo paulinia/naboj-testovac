@@ -9,9 +9,11 @@ type Scoreboard []struct {
 	last   time.Time
 }
 
-func (s Scoreboard) show() {
-	fmt.Printf("\tName\tPoints\tLast Submit\n")
+func (s Scoreboard) String() string {
+	str := ""
+	str += fmt.Sprintf("\tName\tPoints\tLast Submit\n")
 	for i, u := range s {
-		fmt.Printf("%v\t%v\t%v\t%v\n", i, u.name, u.points, u.last)
+		str += fmt.Sprintf("%v\t%v\t%v\t%v\n", i, u.name, u.points, u.last)
 	}
+	return str
 }
