@@ -55,6 +55,7 @@ func (d *Database) readDatabase(r *bufio.Reader) {
 func (c *Contest) read(r *bufio.Reader) {
 	fmt.Sscan(getLine(r), &(c.start))
 	fmt.Sscan(getLine(r), &(c.beginP))
+	c.users = make(map[string]User)
 	for {
 		s := getLine(r)
 		if s == "ENDP" {

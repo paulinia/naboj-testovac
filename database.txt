@@ -1,3 +1,8 @@
+
+ENDS
+0
+0
+
 Malá Janka chce ísť na pláž. K dispozícií má nasledovné rozlíšiteľné plážové outfity: 5 plaviek, 3 slamené klobúky, 4 slnečné okuliare a 5 tričiek. V súlade s pravidlami pláže, musí mať na sebe plavky. Nosenie slnečných okuliarov, klobúka a trička nie je povinné. Avšak na sebe môže mať najviac jeden kus z každého. Koľko je rôznych outfitov, v ktorých Janka môže vyjsť na pláž? 
 ENDS
 600
@@ -23,6 +28,11 @@ ENDS
 12
 9
 MAT
+Uvažujme nelineární kondenzátor, tedy takový, jehož kapacita závisí na napětí na něm. Jakámusí být tato závislost, aby byl náboj na kondenzátoru vždy konstantní? Náboj označujte ako Q a napätie ako U.
+ENDS
+Q/U
+9
+FYZ
 Sluhovia kráľa Chobotnicu majú šesť, sedem, alebo osem chápadiel. Tí, ktorí majú sedem chápadiel vždy klamú, zatiaľ čo tí, ktorí majú šesť alebo osem chápadiel vždy vravia pravdu. Jedného dňa kráľ Chobotnica zavolal štyroch svojich sluhov a spýtal sa ich, koľko chápadiel majú oni štyria spolu. Prvý sluha odpovedal, že celkovo majú spolu 25, ďalší tvrdil 26, tretí povedal 27 a posledný vyhlásil, že 28. Koľko chápadiel majú kráľovi pravdovravní sluhovia (z týchto štyroch) dokopy? 
 ENDS
 6

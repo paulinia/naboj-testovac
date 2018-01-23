@@ -28,3 +28,10 @@ type WrongPassword struct {
 func (e WrongPassword) Error() string {
 	return fmt.Sprintf("Wrong password")
 }
+
+type WrongAnswer struct {
+}
+
+func (e WrongAnswer) Error() string {
+	return "Wrong answer."
+}

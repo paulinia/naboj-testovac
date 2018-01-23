@@ -1,6 +1,7 @@
 package main
 
 import "time"
+import "fmt"
 
 type Submit struct {
 	t      time.Time
@@ -9,6 +10,7 @@ type Submit struct {
 }
 
 func (c *Contest) pointValue(task int, sumbits []Submit) int {
+	fmt.Println(sumbits)
 	cnt := 0
 	for _, s := range sumbits {
 		if s.task == task {

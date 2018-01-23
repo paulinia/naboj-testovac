@@ -141,8 +141,11 @@ func (c *Contest) submit(user, password string, id int, sol string) (points int,
 			defer fnc()
 			u.points += points
 			u.submits = append(u.submits, Submit{time.Now(), id, points})
+			er = nil
+		} else {
+			er = WrongAnswer{}
+			points = 0
 		}
-		er = nil
 	}
 	return
 }
