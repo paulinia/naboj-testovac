@@ -23,10 +23,13 @@ func newProblem() {
 	fmt.Printf("Zadaj číslo príkladu: ")
 	fmt.Sscan(getLine(r), &num)
 	fmt.Printf("Zadaj typ príkladu [MAT/FYZ]: ")
+	typ := getLine(r)
+	fmt.Println("Zadaj adresu obrazku (alebo prazdny string ak ziadny): ")
 	D.addProblem(Problem{
 		statement,
 		res,
 		num,
+		typ,
 		getLine(r),
 	})
 }
@@ -47,6 +50,9 @@ func generate() {
 		var num int
 		_, err := fmt.Fscan(reader, &num)
 		if err == io.EOF {
+			if len(scoring) < 1 {
+				scoring = append(scoring, 1)
+			}
 			generated = true
 			C = generateContest(n, bn, []string{typ}, scoring, &D)
 			break
@@ -64,28 +70,18 @@ func addUser() {
 	name := getLine(r)
 	fmt.Printf("Password: ")
 	password := getLine(r)
-	C.addUser(name, password)
-}
-
-func submit() {
-	fmt.Printf("Username: ")
-	name := getLine(r)
-	fmt.Printf("Password: ")
-	password := getLine(r)
-	fmt.Printf("Task id: ")
-	var task int
-	fmt.Sscan(getLine(r), &task)
-	fmt.Printf("Riešenie (viacero čísel oddeľujte 'a') : ")
-	sol := getLine(r)
-	p, err := C.submit(name, password, task, sol)
-	if err != nil {
+	if err := C.addUser(name, password); err != nil {
 		fmt.Println(err.Error())
-	} else {
-		fmt.Println("Dostal si", p, "bodov.")
 	}
+	fmt.Println("Succesful")
 }
 
-func showp(name, password string, task int) (string, error) {
-	s, er := C.show(name, password, task)
-	return s, er
+func submit(name, password, sol string, task int) (int, error) {
+	fmt.Printf("Riešenie (viacero čísel oddeľujte 'a') : ")
+	p, err := C.submit(name, password, task, sol)
+	return p, err
+}
+
+func showp(name, password string, task int) (string, string, error) {
+	return C.show(name, password, task)
 }

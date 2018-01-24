@@ -1,7 +1,6 @@
 package main
 
 import (
-	"crypto/sha256"
 	"fmt"
 	"sort"
 	"time"
@@ -55,10 +54,14 @@ func generateContest(n, bp int, typ []string, scoring []int, D *Database) Contes
 	}
 }
 
-func (c *Contest) addUser(name string, password string) {
+func (c *Contest) addUser(name string, password string) error {
+	_, ok := C.users[name]
+	if ok {
+		return UserAlreadyExistsError{name}
+	}
 	newU := User{
 		name,
-		sha256.Sum224([]byte(password)),
+		password,
 		0,
 		make([]int, c.beginP),
 		make([]Submit, 0),
@@ -67,6 +70,7 @@ func (c *Contest) addUser(name string, password string) {
 		newU.avialable[i] = i
 	}
 	c.users[name] = newU
+	return nil
 }
 
 func (c *Contest) begin() {
@@ -91,19 +95,18 @@ func (c *Contest) getScoreboard() Scoreboard {
 	})
 
 	for i, id := range users {
-		scoreboard[i].name = c.users[id].name
+		scoreboard[i].Name = c.users[id].name
 		if len(c.users[id].submits) > 0 {
-			scoreboard[i].last = c.users[id].submits[len(c.users[id].submits)-1].t
+			scoreboard[i].Last = c.users[id].submits[len(c.users[id].submits)-1].t
 		}
-		scoreboard[i].points = c.users[id].points
+		scoreboard[i].Points = c.users[id].points
 	}
 	return scoreboard
 }
 
-func (c *Contest) show(user, password string, id int) (string, error) {
-	if sha256.Sum224([]byte(password)) != c.users[user].password {
-		fmt.Println(":(")
-		return "", WrongPassword{user}
+func (c *Contest) show(user, password string, id int) (string, string, error) {
+	if password != c.users[user].password {
+		return "", "", WrongPassword{user}
 	}
 	for _, u := range c.users {
 		if u.name != user {
@@ -111,15 +114,15 @@ func (c *Contest) show(user, password string, id int) (string, error) {
 		}
 		for _, p := range u.avialable {
 			if p == id {
-				return c.problemset[id].statement, nil
+				return c.problemset[id].statement, c.problemset[id].imag, nil
 			}
 		}
 	}
-	return "", DontHaveAccesError{user, id}
+	return "", "", DontHaveAccesError{user, id}
 }
 
 func (c *Contest) submit(user, password string, id int, sol string) (points int, er error) {
-	if sha256.Sum224([]byte(password)) != c.users[user].password {
+	if password != c.users[user].password {
 		points = 0
 		er = WrongPassword{user}
 		return
@@ -127,6 +130,8 @@ func (c *Contest) submit(user, password string, id int, sol string) (points int,
 	new := make([]int, 0)
 	u := c.users[user]
 	er = CannotSolveError{id}
+
+	fmt.Printf("WTF co toto robi. Mam acces ku prikladu...")
 
 	for _, p := range c.users[user].avialable {
 		if p != id {
@@ -136,8 +141,10 @@ func (c *Contest) submit(user, password string, id int, sol string) (points int,
 		if c.problemset[p].solved(sol) {
 			points = c.pointValue(id, c.users[user].submits)
 			fnc := func() {
-				u.avialable = append(new, new[len(new)-1]+1)
+				new = append(new, new[len(new)-1]+2)
+				u.avialable = new
 				c.users[user] = u
+				fmt.Println("name: ", c.users[user].name, " a avialable: ", c.users[user].avialable)
 			}
 			defer fnc()
 			u.points += points

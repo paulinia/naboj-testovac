@@ -1,146 +1,175 @@
-
-ENDS
-0
-0
-
 Malá Janka chce ísť na pláž. K dispozícií má nasledovné rozlíšiteľné plážové outfity: 5 plaviek, 3 slamené klobúky, 4 slnečné okuliare a 5 tričiek. V súlade s pravidlami pláže, musí mať na sebe plavky. Nosenie slnečných okuliarov, klobúka a trička nie je povinné. Avšak na sebe môže mať najviac jeden kus z každého. Koľko je rôznych outfitov, v ktorých Janka môže vyjsť na pláž? 
 ENDS
 600
 3
 MAT
+
 Katka strávila dovolenku v dažďovom pralese. Každý deň buď pršalo iba dopoludnia, iba popoludní, alebo pršalo celý deň. Katka mala počas dovolenky 13 dní, keď nepršalo po celý deň. Počas 11 dní pršalo dopoludnia a 12 dní pršalo popoludní. Ako dlho bola Katka na dovolenke? 
 ENDS
 18
 4
 MAT
+
 Koľko kladných celých čísel má vlastnosť, že jeho prvá cifra (zľava) je rovná počtu cifier daného čísla? 
 ENDS
 111111111
 6
 MAT
+
 Deň nazývame šťastný, ak jeho dátum v tvare DD.MM.RRRR (DD označuje deň, MM označuje mesiac a RRRR označuje rok) pozostáva z ôsmych rôznych číslic. Ak je deň alebo mesiac číslo menšie ako 10, doplní sa nulou na dvojciferné číslo. Napríklad 26.04.1785 bol šťastný deň. Kedy najbližšie, od dnes, bude šťastný deň? 
 ENDS
 17.06.2345 
 8
 MAT
+
 Koľko rôznych rovín obsahuje práve štyri vrcholy daného kvádra? 
 ENDS
 12
 9
 MAT
+
 Uvažujme nelineární kondenzátor, tedy takový, jehož kapacita závisí na napětí na něm. Jakámusí být tato závislost, aby byl náboj na kondenzátoru vždy konstantní? Náboj označujte ako Q a napätie ako U.
 ENDS
 Q/U
 9
 FYZ
+
 Sluhovia kráľa Chobotnicu majú šesť, sedem, alebo osem chápadiel. Tí, ktorí majú sedem chápadiel vždy klamú, zatiaľ čo tí, ktorí majú šesť alebo osem chápadiel vždy vravia pravdu. Jedného dňa kráľ Chobotnica zavolal štyroch svojich sluhov a spýtal sa ich, koľko chápadiel majú oni štyria spolu. Prvý sluha odpovedal, že celkovo majú spolu 25, ďalší tvrdil 26, tretí povedal 27 a posledný vyhlásil, že 28. Koľko chápadiel majú kráľovi pravdovravní sluhovia (z týchto štyroch) dokopy? 
 ENDS
 6
 11
 MAT
+
 Otec piatich detí chce kúpiť pečivo pre svoju rodinu na čajový večierok. Po zlých skúsenostiach vie, že potrebuje pre svoje deti buď päť rovnakých, alebo päť rôznych druhov pečiva. Jedného dňa povedal svojej najmladšej dcére Anne: „Choď do cukrárne a od predavačky si pýtaj $x$ náhodných kúskov pečiva! Po tvojom návrate domov, dostane každé dieťa jeden kus pečiva a zvyšné kusy budú pre mamu a otca.“ Za predpokladu, že obchod predáva viac ako päť druhov pečiva a je vždy dobre zásobené každým druhom pečiva, aké číslo x musí otec zvoliť, aby medzi deťmi zaručene nevznikli hádky kvôli pečivu a zároveň kúpil čo najmenej pečiva?
 ENDS
 17
 13
 MAT
+
 Určte pomer obsahu kruhu k obsahu štvorca, ak ich obvody majú rovnakú dĺžku. 
 ENDS
 4:pi
 14
 MAT
+
 Betka zbierala jahody vo svojej záhradke. Chcela ich rozdeliť medzi svojich štyroch synov tak, že každý dostane aspoň 3 jahody a Vlado dostane viac ako Bohuš, Bohuš dostane viac ako Fero a Fero dostane viac ako Marek. Každý zo synov vie svoj počet jahôd, celkový počet jahôd ktoré sa delili a vyššie spomínané podmienky rozdelenia jahôd. Ako môže Betka rozdeliť jahody za predpokladu, že chce rozdeliť čo najmenej jahôd a žiaden zo synov nemá vedieť celé rozdelenie ako Betka jahody delila? 
 ENDS
 3,5,6,8
 18
 MAT
+
 Postupne v smere hodinových ručičiek pozdĺž obvodu kruhu napíšeme všetky celé čísla od 1 do 1000 Potom označíme niekoľko čísel: Začneme číslom 1 a následne v smere hodinových ručičiek označíme každé 15-te číslo (t. j. 16, 31 atď.). Týmto spôsobom označujeme čísla dovtedy, kým nie sme nútení označiť číslo, ktoré sme už označili. Koľko čísel ostane neoznačených po tomto procese? 
 ENDS
 800
 19
 MAT
+
+Riešenie je v metroch za sekundu, s presnosťou na jedno desatinné miesto.
+ENDS
+16.4
+22
+FYZ
+AE.png
 Dominika si vybrala dve prirodzené čísla z čísel od 1 to 17 (zahŕňajúce aj 1 a 17) a vynásobila ich. Na prekvapenie, výsledok ktorý dostala bol rovný súčtu zvyšných 15-tich čísel. Aké dve čísla si Dominika vybrala? 
 ENDS
 10 a 13
 23
 MAT
+
 Koľko rôznych 6-tíc (a,b,c,d,e,f) kladných celých čísel spĺňa podmienky a>b>c>d>e>f a zároveň a+f=b+e=c+d=30?
 ENDS
 364
 24
 MAT
+
 Časovaná bomba je vybavená displejom zobrazujúcim čas pred výbuchom v minútach a sekundách. Odpočítavanie začne na čase 50:00. Žiarovka blikne, ak počet zostávajúcich minút sa rovná počtu zostávajúcich sekúnd zobrazených na displeji (napr. 15:15), alebo keď sa štyri číslice zobrazené na displeji dajú prečítať rovnako odpredu i odzadu (napr. čas 15:51). Bombu môžeme zneškodniť keď žiarovka blikne po 70. raz. Aký čas bude na displeji bomby v tej chvíli? 
 ENDS
 03:03
 25
 MAT
+
 V kasíne sedí niekoľko ľudí okolo veľkého stola a hrá ruletu. Keď Matúš opustí stôl, odnáša si výhru vo výške 16 000 a priemerný zostatok zvyšných hráčov, ktorí ostanú pri stole, sa zníži o 1000 eur. Znovu sa zníži o 1000 eur, keď sa pridajú do hry dvaja hráči Rišo a Dorka, každý so vstupným vkladom po 2000 eur. Koľko hráčov sedelo okolo stola, pokiaľ pri ňom sedel aj Matúš? 
 ENDS
 9
 27
 MAT
+
 V kocke 7×7×7, sú každé dve susedné jednotkové kocky oddelené zatvorenými dverami. Chceme otvoriť niekoľko dvier tak, aby sa z každej jednotkovej kocky dalo dostať do aspoň jednej vonkajšej jednotkovej kocky. Aký najmenší počet dverí musíme otvoriť? 
 ENDS
 125
 28
 MAT
+
 Je známe, že 20∗∗∗16 je 7-ciferná druhá mocnina prirodzeného čísla. Aké tri cifry majú byť namiesto hviezdičiek? 
 ENDS
 909
 29
 MAT
+
 Trojuholník ABC s |AB|=|AC|=5m a BC=6m je čiastočne naplnený vodou. Keď trojuholník leží na straneBC, voda siaha do výšky 3m. Do akej výšky siaha voda ak trojuholník leží na strane AB? 
 ENDS
 18/5
 30
 MAT
+
 Nech ABCD je kosoštvorec a body M, N, rôzne od bodov A, B, C, ležia postupne na úsečkách AB, BC tak, že DMN je rovnostranný trojuholník a AD=MD. Určte veľkosť uhla ABC (v stupňoch). 
 ENDS
 100
 33
 MAT
+
 Mišo je vášnivý zberateľ diamantov, ale vlastní zatiaľ menej ako 200 diamantov. Rozdelil všetky svoje diamanty na niekoľko (aspoň na dve) kôpok tak, aby    každé dve kôpky obsahovali rôzny počet diamantov,    žiadna z kôpok neobsahovala práve dva diamanty,    pre každú z kôpok platilo: ak ju rozdelíme na dve menšie kôpky, tak aspoň jedna z nových kôpok bude obsahovať rovnako veľa diamantov ako niektorá z pôvodných kôpok. Aký najväčší počet diamantov môže Mišo vlastniť?Poznámka: Kôpka pozostáva s nenulového počtu diamantov. 
 ENDS
 196
 35
 MAT
+
 Nájdite jediného trojciferného prvočíselného deliteľa čísla 999999995904. 
 ENDS
 601
 38
 MAT
+
 Rovnostranný trojuholník ABC je vpísaný do kružnice ω. Bod X leží na kratšom oblúku BC kružnice ω a T je priesečník AB a CX. Ak |AX|=5 a |TX|=3, určte |BX|. 
 ENDS
 15/8
 40
 MAT
+
 Nech ABC je rovnostranný trojuholník. Vnútorný bod P trojuholníka ABC sa nazýva žiariaci, ak existuje práve 27 polpriamok, ktoré vychádzajú z bodu P a rozdeľujú trojuholník ABC na 27 menších trojuholníkov rovnakého obsahu. Určte počet žiariacich bodov v trojuholníku ABC. 
 ENDS
 325
 41
 MAT
+
 Koľko kladných deliteľov čísla 2016^2 menších ako 2016 nie je deliteľom čísla 2016?
 ENDS
 47
 42
 MAT
+
 Z celých čísel a0,a1,a2… vytvoríme postupnosť nasledovným spôsobom: Ak ai je deliteľné tromi, tak ai+1=ai/3; v opačnom prípade ai+1=ai+1. Pre koľko rôznych kladných celých čísel a0 dosiahne táto postupnosť hodnotu 1 prvýkrát práve v 11-tom kroku (t.j. a11=1, ale a0,a1,…,a10≠1)?
 ENDS
 423
 44
 MAT
+
 Nech ABCD, AEFG a EDHI sú obdĺžniky so stredmi postupne K, L a J. Predpokladajme, že body A, D, E sú postupne vnútornými bodmi úsečiek HI, FG, BC a |∠AED|=53∘. Určte v stupňoch veľkosť uhla JKL. 
 ENDS
 74
 45
 MAT
+
 Kubo zobral niekoľko (nie nutne rôznych) čísel z množiny {−1,0,1,2} tak, že ich súčet bol 19 a súčet ich druhých mocnín bol 99. Akú najväčšiu hodnotu mohol nadobudnúť súčet tretích mocnín vybraných čísel? 
 ENDS
 133
 46
 MAT
+
 Nájdite najväčšie 9-ciferné číslo spĺňajúce nasledujúce vlastnosti:    všetky jeho cifry sú rôzne;    pre každé k=1,2,…,9 platí, že keď vyškrtneme jeho k-tu cifru (zľava), dostaneme 8-ciferné číslo deliteľné číslom k.
 ENDS
 876513240
 47
 MAT
+
 END

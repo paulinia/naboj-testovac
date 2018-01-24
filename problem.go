@@ -57,6 +57,7 @@ type Problem struct {
 	result    Result
 	level     int
 	typ       string
+	imag      string
 }
 
 func (a Num) equal(b string) bool {

@@ -33,9 +33,7 @@ func main() {
 		"'GEN' to generate new contest; " +
 		"'START' to start/resume a contest; " +
 		"'END' to end a contest; " +
-		"'SHOWS' to show a scoreboard; " +
 		"'USER' to add a user; " +
-		"'SUBMIT' to submit a solution and " +
 		"'QUIT' to quit.")
 
 	r = bufio.NewReader(os.Stdin)
@@ -57,9 +55,14 @@ func main() {
 		defer fc.Close()
 	}
 
+	http.HandleFunc("/", defaultHandler)
+	http.HandleFunc("/scoreboard/", scoreboardHandler)
 	http.HandleFunc("/show/", showHandler)
+	http.HandleFunc("/submit/", submitHandler)
+	http.HandleFunc("/evaluate/", evaluateHandler)
 	http.HandleFunc("/problem/", problemHandler)
 	http.HandleFunc("/view/", viewHandler)
+	http.HandleFunc("/image/", imageHandler)
 	go http.ListenAndServe(":8000", nil)
 
 loop:
@@ -90,6 +93,10 @@ loop:
 				fmt.Printf("There's no contest to start.\n")
 				break
 			}
+			if active {
+				fmt.Printf("A contest is already running!")
+				break
+			}
 			C.begin()
 			active = true
 		case "END":
@@ -114,26 +121,12 @@ loop:
 				break
 			}
 			addUser()
-		case "SUBMIT":
-			if !active {
-				fmt.Printf("There's no contest running\n")
-				break
-			}
-			submit()
-		case "SHOWS":
-			if !active {
-				fmt.Printf("No contest running!\n")
-				break
-			}
-			fmt.Printf(C.getScoreboard().String())
 		default:
 			fmt.Println("Type 'NEW' to enter new problem; " +
 				"'GEN' to generate new contest; " +
 				"'START' to start/resume a contest; " +
 				"'END' to end a contest; " +
-				"'SHOWS' to show a scoreboard; " +
 				"'USER' to add a user; " +
-				"'SUBMIT' to submit a solution and " +
 				"'QUIT' to quit.")
 		}
 	}

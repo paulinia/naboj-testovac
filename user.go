@@ -1,10 +1,8 @@
 package main
 
-import "crypto/sha256"
-
 type User struct {
 	name      string
-	password  [sha256.Size224]byte
+	password  string
 	points    int
 	avialable []int
 	submits   []Submit

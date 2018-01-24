@@ -1,0 +1,17 @@
+<h1>Výsledkovka</h1>
+
+<table style="width: 100%">
+    <tr>
+        <th> Meno </th>
+        <th> Body </th>
+        <th> Posledný submit </th>
+    </tr>
+
+    {{range .Scores}} <tr>
+        <th> {{.Name}}</th>
+        <th> {{.Points}} </th>
+        <th> {{.Last}} </th>
+    </tr> {{end}}
+</table>    
+
+<p>[<a href="\">Back</a>]</p>

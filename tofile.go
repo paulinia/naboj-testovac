@@ -2,7 +2,6 @@ package main
 
 import (
 	"bufio"
-	"crypto/sha256"
 	"fmt"
 	"strings"
 	"time"
@@ -14,6 +13,7 @@ func (p *Problem) write(w *bufio.Writer) {
 	fmt.Fprintln(w, p.result)
 	fmt.Fprintln(w, p.level)
 	fmt.Fprintln(w, p.typ)
+	fmt.Fprintln(w, p.imag)
 }
 
 func (d *Database) writeToFile(w *bufio.Writer) {
@@ -43,10 +43,12 @@ func (d *Database) readDatabase(r *bufio.Reader) {
 		res := toResult(getLine(r))
 		var lev int
 		fmt.Sscan(getLine(r), &lev)
+		// typ := getLine(r)
 		d.addProblem(Problem{
 			statement,
 			res,
 			lev,
+			getLine(r),
 			getLine(r),
 		})
 	}
@@ -77,6 +79,7 @@ func (c *Contest) read(r *bufio.Reader) {
 			res,
 			lev,
 			getLine(r),
+			getLine(r),
 		})
 	}
 	for {
@@ -85,7 +88,7 @@ func (c *Contest) read(r *bufio.Reader) {
 			break
 		}
 		name := s
-		password := sha256.Sum224([]byte(getLine(r)))
+		password := getLine(r)
 		var points int
 		fmt.Sscan(getLine(r), &points)
 		reader := strings.NewReader(getLine(r))
@@ -114,7 +117,12 @@ func (c *Contest) read(r *bufio.Reader) {
 			submits,
 		}
 	}
-
+	line := getLine(r)
+	scores := strings.Split(line, " ")
+	C.scoring = make([]int, len(scores))
+	for i := 0; i < len(scores); i++ {
+		fmt.Sscan(scores[i], &(C.scoring[i]))
+	}
 }
 
 func (c *Contest) write(w *bufio.Writer) {
@@ -126,7 +134,7 @@ func (c *Contest) write(w *bufio.Writer) {
 	fmt.Fprintln(w, "ENDP")
 	for _, u := range c.users {
 		fmt.Fprintln(w, u.name)
-		fmt.Fprintf(w, "%x\n", u.password)
+		fmt.Fprintln(w, u.password)
 		fmt.Fprintln(w, u.points)
 		for i, a := range u.avialable {
 			if i > 0 {
