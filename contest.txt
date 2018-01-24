@@ -1,4 +1,4 @@
-2018-01-24 00:00:13.527899077 +0100 CET m=+4.503745519
+2018-01-24 01:11:05.838667131 +0100 CET m=+3.012907221
 5
 Malá Janka chce ísť na pláž. K dispozícií má nasledovné rozlíšiteľné plážové outfity: 5 plaviek, 3 slamené klobúky, 4 slnečné okuliare a 5 tričiek. V súlade s pravidlami pláže, musí mať na sebe plavky. Nosenie slnečných okuliarov, klobúka a trička nie je povinné. Avšak na sebe môže mať najviac jeden kus z každého. Koľko je rôznych outfitov, v ktorých Janka môže vyjsť na pláž? 
 ENDS
@@ -136,18 +136,23 @@ ENDS
 47
 MAT
 ENDP
+kubo
+f08e318f470707e384508235eed1d93d06626c4e98baa761da9aa16e
+0
+0 1 2 3 4
+ENDS
 paulinia
-72e0f198024193a426db9bb718bde50ab707831f3bfff3eee3a63112
+967bdbd9f5140f8a4961fa3868d37b480fdd7953abbae1dc113d1903
 0
 0 1 2 3 4
 ENDS
 kubo1
-ce26b854b3146284c9634547f3c10457233b167fee7214da35899a5c
+15ed5d50d762275cdd28dad0eb5c039f9d4e7b448737eb5f25f3b42b
 0
 0 1 2 3 4
 ENDS
 bubu
-336d8ef3b80caab30f25c7a56f1afd5b11730054df04124089848941
+89249dc4e0fcd88d927808e6a7d1f3d73285a7f3ac1e9fa652db9de7
 0
 0 1 2 3 4
 ENDS

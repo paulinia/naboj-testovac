@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"unicode"
 )
 
@@ -63,7 +64,11 @@ func (a Num) equal(b string) bool {
 }
 
 func (a Float) equal(b string) bool {
-	return fmt.Sprint(float64(a.x)) == (b)
+	c := float64(a.x)
+	if math.Abs(c-a.x) < math.Pow(10, -float64(a.precesion)) && math.Abs(c-a.x)/c < math.Pow(10, -float64(a.precesion)) {
+		return true
+	}
+	return false
 }
 
 func (a Text) equal(b string) bool {

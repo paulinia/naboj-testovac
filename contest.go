@@ -102,6 +102,7 @@ func (c *Contest) getScoreboard() Scoreboard {
 
 func (c *Contest) show(user, password string, id int) (string, error) {
 	if sha256.Sum224([]byte(password)) != c.users[user].password {
+		fmt.Println(":(")
 		return "", WrongPassword{user}
 	}
 	for _, u := range c.users {

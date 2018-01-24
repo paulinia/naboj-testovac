@@ -86,7 +86,6 @@ func submit() {
 }
 
 func showp(name, password string, task int) (string, error) {
-	fmt.Sscan(getLine(r), &task)
 	s, er := C.show(name, password, task)
 	return s, er
 }
