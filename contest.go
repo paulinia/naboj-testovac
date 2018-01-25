@@ -26,7 +26,8 @@ func validContest(p []Problem) bool {
 	last := 0
 	for _, pr := range p {
 		fmt.Printf("%v ", pr.level)
-		if pr.level-last > 4 {
+		if pr.level-last > 5 {
+			fmt.Printf("WTF pr.level %v a last %v\n", pr.level, last)
 			return false
 		}
 		last = pr.level
@@ -131,7 +132,11 @@ func (c *Contest) submit(user, password string, id int, sol string) (points int,
 	u := c.users[user]
 	er = CannotSolveError{id}
 
-	fmt.Printf("WTF co toto robi. Mam acces ku prikladu...")
+	maxProblem := -1
+
+	for _, p := range c.users[user].avialable {
+		maxProblem = p
+	}
 
 	for _, p := range c.users[user].avialable {
 		if p != id {
@@ -141,10 +146,10 @@ func (c *Contest) submit(user, password string, id int, sol string) (points int,
 		if c.problemset[p].solved(sol) {
 			points = c.pointValue(id, c.users[user].submits)
 			fnc := func() {
-				new = append(new, new[len(new)-1]+2)
+				new = append(new, maxProblem+1)
 				u.avialable = new
 				c.users[user] = u
-				fmt.Println("name: ", c.users[user].name, " a avialable: ", c.users[user].avialable)
+				fmt.Println("name: ", c.users[user].name, " a avialable: ", c.users[user].avialable, " submity:", c.users[user].submits)
 			}
 			defer fnc()
 			u.points += points
@@ -153,6 +158,7 @@ func (c *Contest) submit(user, password string, id int, sol string) (points int,
 		} else {
 			er = WrongAnswer{}
 			points = 0
+			u.submits = append(u.submits, Submit{time.Now(), id, points})
 		}
 	}
 	return

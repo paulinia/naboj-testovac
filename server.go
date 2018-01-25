@@ -24,7 +24,7 @@ func showHandler(w http.ResponseWriter, r *http.Request) {
 		"Login: \n"+
 		"<div><input type=\"text\" name=\"name\" value = \"\"></div>\n"+
 		"Heslo:\n"+
-		"<div><input type=\"text\" name=\"password\" value = \"*****\"></div>\n"+
+		"<div><input type=\"password\" name=\"password\" value = \"\"></div>\n"+
 		"Číslo príkladu:\n"+
 		"<div><input type=\"text\" name=\"number\"></div>\n"+
 		"<div><input type=\"submit\" value=\"Ukáž\"></div>\n"+
@@ -171,9 +171,10 @@ func evaluateHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	answer := r.FormValue("answer")
 
+	fmt.Println("Idem submitnut moje riesenie:", answer)
+
 	points, err := C.submit(name, password, num, answer)
 	if err != nil {
-		fmt.Println("Tu je problem?")
 		fmt.Fprint(w, err.Error())
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
@@ -204,5 +205,6 @@ func scoreboardHandler(w http.ResponseWriter, r *http.Request) {
 
 func imageHandler(w http.ResponseWriter, r *http.Request) {
 	path := r.URL.Path[len("/"):]
+	fmt.Println("Chcem obrazok na adrese", path)
 	http.ServeFile(w, r, path)
 }

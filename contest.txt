@@ -1,200 +1,515 @@
-0001-01-01 00:00:00 +0000 UTC
-5
-Malá Janka chce ísť na pláž. K dispozícií má nasledovné rozlíšiteľné plážové outfity: 5 plaviek, 3 slamené klobúky, 4 slnečné okuliare a 5 tričiek. V súlade s pravidlami pláže, musí mať na sebe plavky. Nosenie slnečných okuliarov, klobúka a trička nie je povinné. Avšak na sebe môže mať najviac jeden kus z každého. Koľko je rôznych outfitov, v ktorých Janka môže vyjsť na pláž? 
-ENDS
-600
-3
-MAT
-
-Katka strávila dovolenku v dažďovom pralese. Každý deň buď pršalo iba dopoludnia, iba popoludní, alebo pršalo celý deň. Katka mala počas dovolenky 13 dní, keď nepršalo po celý deň. Počas 11 dní pršalo dopoludnia a 12 dní pršalo popoludní. Ako dlho bola Katka na dovolenke? 
-ENDS
-18
-4
-MAT
-
-Koľko kladných celých čísel má vlastnosť, že jeho prvá cifra (zľava) je rovná počtu cifier daného čísla? 
-ENDS
-111111111
+2018-01-25 12:14:03.559428251 +0100 CET m=+16.245893187
 6
-MAT
-
-Deň nazývame šťastný, ak jeho dátum v tvare DD.MM.RRRR (DD označuje deň, MM označuje mesiac a RRRR označuje rok) pozostáva z ôsmych rôznych číslic. Ak je deň alebo mesiac číslo menšie ako 10, doplní sa nulou na dvojciferné číslo. Napríklad 26.04.1785 bol šťastný deň. Kedy najbližšie, od dnes, bude šťastný deň? 
+V metroch za sekundu.
 ENDS
-17.06.2345 
-8
-MAT
+3300
+1
+FYZ
+1a.png
 
-Koľko rôznych rovín obsahuje práve štyri vrcholy daného kvádra? 
 ENDS
-12
-9
-MAT
-
-Sluhovia kráľa Chobotnicu majú šesť, sedem, alebo osem chápadiel. Tí, ktorí majú sedem chápadiel vždy klamú, zatiaľ čo tí, ktorí majú šesť alebo osem chápadiel vždy vravia pravdu. Jedného dňa kráľ Chobotnica zavolal štyroch svojich sluhov a spýtal sa ich, koľko chápadiel majú oni štyria spolu. Prvý sluha odpovedal, že celkovo majú spolu 25, ďalší tvrdil 26, tretí povedal 27 a posledný vyhlásil, že 28. Koľko chápadiel majú kráľovi pravdovravní sluhovia (z týchto štyroch) dokopy? 
-ENDS
-6
-11
-MAT
-
-Otec piatich detí chce kúpiť pečivo pre svoju rodinu na čajový večierok. Po zlých skúsenostiach vie, že potrebuje pre svoje deti buď päť rovnakých, alebo päť rôznych druhov pečiva. Jedného dňa povedal svojej najmladšej dcére Anne: „Choď do cukrárne a od predavačky si pýtaj $x$ náhodných kúskov pečiva! Po tvojom návrate domov, dostane každé dieťa jeden kus pečiva a zvyšné kusy budú pre mamu a otca.“ Za predpokladu, že obchod predáva viac ako päť druhov pečiva a je vždy dobre zásobené každým druhom pečiva, aké číslo x musí otec zvoliť, aby medzi deťmi zaručene nevznikli hádky kvôli pečivu a zároveň kúpil čo najmenej pečiva?
-ENDS
-17
-13
-MAT
-
-Určte pomer obsahu kruhu k obsahu štvorca, ak ich obvody majú rovnakú dĺžku. 
-ENDS
-4:pi
-14
-MAT
-
-Betka zbierala jahody vo svojej záhradke. Chcela ich rozdeliť medzi svojich štyroch synov tak, že každý dostane aspoň 3 jahody a Vlado dostane viac ako Bohuš, Bohuš dostane viac ako Fero a Fero dostane viac ako Marek. Každý zo synov vie svoj počet jahôd, celkový počet jahôd ktoré sa delili a vyššie spomínané podmienky rozdelenia jahôd. Ako môže Betka rozdeliť jahody za predpokladu, že chce rozdeliť čo najmenej jahôd a žiaden zo synov nemá vedieť celé rozdelenie ako Betka jahody delila? 
-ENDS
-3,5,6,8
-18
-MAT
-
-Postupne v smere hodinových ručičiek pozdĺž obvodu kruhu napíšeme všetky celé čísla od 1 do 1000 Potom označíme niekoľko čísel: Začneme číslom 1 a následne v smere hodinových ručičiek označíme každé 15-te číslo (t. j. 16, 31 atď.). Týmto spôsobom označujeme čísla dovtedy, kým nie sme nútení označiť číslo, ktoré sme už označili. Koľko čísel ostane neoznačených po tomto procese? 
-ENDS
-800
-19
-MAT
-
-Dominika si vybrala dve prirodzené čísla z čísel od 1 to 17 (zahŕňajúce aj 1 a 17) a vynásobila ich. Na prekvapenie, výsledok ktorý dostala bol rovný súčtu zvyšných 15-tich čísel. Aké dve čísla si Dominika vybrala? 
-ENDS
-10 a 13
-23
-MAT
-
-Koľko rôznych 6-tíc (a,b,c,d,e,f) kladných celých čísel spĺňa podmienky a>b>c>d>e>f a zároveň a+f=b+e=c+d=30?
-ENDS
-364
-24
-MAT
-
-Časovaná bomba je vybavená displejom zobrazujúcim čas pred výbuchom v minútach a sekundách. Odpočítavanie začne na čase 50:00. Žiarovka blikne, ak počet zostávajúcich minút sa rovná počtu zostávajúcich sekúnd zobrazených na displeji (napr. 15:15), alebo keď sa štyri číslice zobrazené na displeji dajú prečítať rovnako odpredu i odzadu (napr. čas 15:51). Bombu môžeme zneškodniť keď žiarovka blikne po 70. raz. Aký čas bude na displeji bomby v tej chvíli? 
-ENDS
-03:03
-25
-MAT
-
-V kasíne sedí niekoľko ľudí okolo veľkého stola a hrá ruletu. Keď Matúš opustí stôl, odnáša si výhru vo výške 16 000 a priemerný zostatok zvyšných hráčov, ktorí ostanú pri stole, sa zníži o 1000 eur. Znovu sa zníži o 1000 eur, keď sa pridajú do hry dvaja hráči Rišo a Dorka, každý so vstupným vkladom po 2000 eur. Koľko hráčov sedelo okolo stola, pokiaľ pri ňom sedel aj Matúš? 
-ENDS
-9
-27
-MAT
-
-V kocke 7×7×7, sú každé dve susedné jednotkové kocky oddelené zatvorenými dverami. Chceme otvoriť niekoľko dvier tak, aby sa z každej jednotkovej kocky dalo dostať do aspoň jednej vonkajšej jednotkovej kocky. Aký najmenší počet dverí musíme otvoriť? 
-ENDS
-125
-28
-MAT
-
-Je známe, že 20∗∗∗16 je 7-ciferná druhá mocnina prirodzeného čísla. Aké tri cifry majú byť namiesto hviezdičiek? 
-ENDS
-909
-29
-MAT
-
-Trojuholník ABC s |AB|=|AC|=5m a BC=6m je čiastočne naplnený vodou. Keď trojuholník leží na straneBC, voda siaha do výšky 3m. Do akej výšky siaha voda ak trojuholník leží na strane AB? 
-ENDS
-18/5
-30
-MAT
-
-Nech ABCD je kosoštvorec a body M, N, rôzne od bodov A, B, C, ležia postupne na úsečkách AB, BC tak, že DMN je rovnostranný trojuholník a AD=MD. Určte veľkosť uhla ABC (v stupňoch). 
-ENDS
-100
-33
-MAT
-
-Mišo je vášnivý zberateľ diamantov, ale vlastní zatiaľ menej ako 200 diamantov. Rozdelil všetky svoje diamanty na niekoľko (aspoň na dve) kôpok tak, aby    každé dve kôpky obsahovali rôzny počet diamantov,    žiadna z kôpok neobsahovala práve dva diamanty,    pre každú z kôpok platilo: ak ju rozdelíme na dve menšie kôpky, tak aspoň jedna z nových kôpok bude obsahovať rovnako veľa diamantov ako niektorá z pôvodných kôpok. Aký najväčší počet diamantov môže Mišo vlastniť?Poznámka: Kôpka pozostáva s nenulového počtu diamantov. 
-ENDS
-196
-35
-MAT
-
-Nájdite jediného trojciferného prvočíselného deliteľa čísla 999999995904. 
-ENDS
-601
-38
-MAT
-
-Rovnostranný trojuholník ABC je vpísaný do kružnice ω. Bod X leží na kratšom oblúku BC kružnice ω a T je priesečník AB a CX. Ak |AX|=5 a |TX|=3, určte |BX|. 
-ENDS
-15/8
 40
-MAT
-
-Nech ABC je rovnostranný trojuholník. Vnútorný bod P trojuholníka ABC sa nazýva žiariaci, ak existuje práve 27 polpriamok, ktoré vychádzajú z bodu P a rozdeľujú trojuholník ABC na 27 menších trojuholníkov rovnakého obsahu. Určte počet žiariacich bodov v trojuholníku ABC. 
-ENDS
-325
-41
-MAT
-
-Koľko kladných deliteľov čísla 2016^2 menších ako 2016 nie je deliteľom čísla 2016?
-ENDS
-47
-42
-MAT
-
-Z celých čísel a0,a1,a2… vytvoríme postupnosť nasledovným spôsobom: Ak ai je deliteľné tromi, tak ai+1=ai/3; v opačnom prípade ai+1=ai+1. Pre koľko rôznych kladných celých čísel a0 dosiahne táto postupnosť hodnotu 1 prvýkrát práve v 11-tom kroku (t.j. a11=1, ale a0,a1,…,a10≠1)?
-ENDS
-423
-44
-MAT
-
-Nech ABCD, AEFG a EDHI sú obdĺžniky so stredmi postupne K, L a J. Predpokladajme, že body A, D, E sú postupne vnútornými bodmi úsečiek HI, FG, BC a |∠AED|=53∘. Určte v stupňoch veľkosť uhla JKL. 
-ENDS
-74
-45
-MAT
-
-Kubo zobral niekoľko (nie nutne rôznych) čísel z množiny {−1,0,1,2} tak, že ich súčet bol 19 a súčet ich druhých mocnín bol 99. Akú najväčšiu hodnotu mohol nadobudnúť súčet tretích mocnín vybraných čísel? 
-ENDS
-133
-46
-MAT
-
-Nájdite najväčšie 9-ciferné číslo spĺňajúce nasledujúce vlastnosti:    všetky jeho cifry sú rôzne;    pre každé k=1,2,…,9 platí, že keď vyškrtneme jeho k-tu cifru (zľava), dostaneme 8-ciferné číslo deliteľné číslom k.
-ENDS
-876513240
-47
-MAT
-
-ENDP
-bubu
-duch
 1
-0 1 2 3 4
-0001-01-01 00:00:00 +0000 UTC
-4
-1
+FYZ
+AAa.png
+
 ENDS
-kubo
-vlacik
+20
 2
-0 1 2 3 5
-0001-01-01 00:00:00 +0000 UTC
+FYZ
+2.png
+
+ENDS
+1000
+2
+FYZ
+ABa.png
+Riešenie v metroch kubických za sekundu na tri významné cifry.
+ENDS
+0.000247
+3
+FYZ
+3a.png
+Zaokrúhlite výsledok na celé gramy.
+ENDS
+71
+3
+FYZ
+3.png
+Teplotu zadajte v stupňoch.
+ENDS
+55
 4
-1
-0001-01-01 00:00:00 +0000 UTC
+FYZ
+ADa.png
+Odpovedajte v kilojouloch.
+ENDS
+775
 4
-0
-0001-01-01 00:00:00 +0000 UTC
-4
-0
-0001-01-01 00:00:00 +0000 UTC
-4
-0
-0001-01-01 00:00:00 +0000 UTC
+FYZ
+AD.png
+Odpovedajte v celých kilometroch za hodinu.
+ENDS
+59
 5
-1
+FYZ
+AE.png
+Zadajte hodnotu v percentách na dve desatinné miesta.
 ENDS
-paulinia
-lin
+1.25
+5
+FYZ
+AEa.png
+Odpoveď uvádzajte v kilometroch za hodinu na tri významné cifry.
+ENDS
+16.5
+6
+FYZ
+6a.png
+Odpoveď je v metroch za sekundu na dve desatinné miesta.
+ENDS
+2.99
+6
+FYZ
+AF.png
+
+ENDS
+223
+6
+FYZ
+6.png
+Odpoveď má byť v metroch.
+ENDS
+3
+7
+FYZ
+7.png
+Odpoveď udávajte v centimetroch.
+ENDS
+743
+8
+FYZ
+8a.png
+Odpoveď je v stupňoch na dve desatinné miesta.
+ENDS
+14.04
+8
+FYZ
+AG.png
+
+ENDS
+1.18
+9
+FYZ
+AHa.png
+Uvažujme nelineární kondenzátor, tedy takový, jehož kapacita závisí na napětí na něm. Jakámusí být tato závislost, aby byl náboj na kondenzátoru vždy konstantní? Náboj označujte ako Q a napätie ako U.
+ENDS
+Q/U
+9
+FYZ
+
+Odpovedajte v metroch na dve desatinné miesta.
+ENDS
+1.22
+10
+FYZ
+10.png
+Odpoveď uvádzajte v otočeniach za minútu.
+ENDS
+19
+10
+FYZ
+10a.png
+Odpoveď uvádzajte na 2 desatinné miesta v litroch.
+ENDS
+2.97
+11
+FYZ
+11.png
+Odpovedajte na jedno desatinné miesto.
+ENDS
+15.4
+11
+FYZ
+BA.png
+Určite uhol v stupňoch na dve desatinné miesta.
+ENDS
+26.56
+11
+FYZ
+11a.png
+Napíšte pomer vrece/mikuláš a odpovedajte na dva desatinné miesta.
+ENDS
+0.75
+12
+FYZ
+BB.png
+Odpoveď je v sekundách na dve desatinné miesta.
+ENDS
+2.67
+12
+FYZ
+BBa.png
+Odpoveď má byť na 2 desatinné miesta.
+ENDS
+0.75
+13
+FYZ
+13a.png
+Odpovedajte na tri desatinné miesta.
+ENDS
+0.032
+14
+FYZ
+14a.png
+Odpoveď je v celých kilometroch za hodinu.
+ENDS
+83
+14
+FYZ
+BD.png
+Odpoveď je v minútach na jedno desatinné miesto.
+ENDS
+7.2
+15
+FYZ
+BG.png
+Odpoveď je v stupňoch na jedno desatinné miesto.
+ENDS
+57.4
+15
+FYZ
+BF.png
+Odpovedajte v Jouloch, zaokrúhlených na celé čísla.
+ENDS
+56
+15
+FYZ
+15.png
+Odpovedajte na dve desatinné miesta.
+ENDS
+0.47
+16
+FYZ
+16.png
+
+ENDS
+37
+16
+FYZ
+BH.png
+Odpoveď je v cm^-3s^-1 na dve desatinné miesta.
+ENDS
+0.3
+17
+FYZ
+CA.png
+Odpoveď má byť v celých metroch za sekundu.
+ENDS
+14
+17
+FYZ
+17.png
+Odpoveď udávajte v sekundách na 1 desatinné miesto.
+ENDS
+10.8
+18
+FYZ
+18.png
+Odpovedajte na dve desatinné miesta v metroch.
+ENDS
+443.75
+18
+FYZ
+18a.png
+Odpoveď je v Jouloch.
+ENDS
+-4
+18
+FYZ
+CB.png
+Odpoveď je v celých mililitroch.
+ENDS
+53
+19
+FYZ
+19.png
+
+ENDS
 0
-0 1 2 3 4
+20
+FYZ
+20.png
+Odpovedzte na dve platné cifry v metroch.
 ENDS
+0.00031
+20
+FYZ
+CDa.png
+Odpoveď je v stupňoch celzia.
+ENDS
+2590
+21
+FYZ
+CE.png
+Odpoveď je v celých centimetroch.
+ENDS
+58
+21
+FYZ
+21.png
+Odpovedajte na dve desatinné miesta.
+ENDS
+1.96
+22
+FYZ
+22.png
+Odpoveď je v centimetroch na dve desatinné miesta.
+ENDS
+8.45
+22
+FYZ
+CFa.png
+Riešenie je v metroch za sekundu, s presnosťou na jedno desatinné miesto.
+ENDS
+16.4
+22
+FYZ
+AE.png
+Odpovedzte na tri platném cifry.
+ENDS
+0.943
+22
+FYZ
+CF.png
+Odpoveď uveďte na jedno desatinné miesto.
+ENDS
+7.9
+23
+FYZ
+CG.png
+
+ENDS
+8
+23
+FYZ
+23.png
+Odpoveď je v milimetroch.
+ENDS
+5
+24
+FYZ
+CH.png
+Odpoveď je v metroch.
+ENDS
+531
+24
+FYZ
+CHa.png
+Odpovedajte v sekundách s presnosťou na jedno desatinné miesto.
+ENDS
+41.1
+25
+FYZ
+25.png
+Odpoveď je násobok R (ak je odpoveď a*R napíšte a) s presnosťou na 2 desatinné miesta.
+ENDS
+1.62
+27
+FYZ
+27a.png
+3127FYZDC.pngOdpoveď je v gramoch na dve desatinné miesta.
+ENDS
+0.58
+27
+FYZ
+DCa.png
+Odpoveď je v násobkoch k na dve desatinné miesta.
+ENDS
+1.33
+28
+FYZ
+DE.png
+Odpoveď je v centimetroch na jedno desatinné miesto.
+ENDS
+14.5
+28
+FYZ
+DDa.png
+Odpoveď je metroch za sekundu.
+ENDS
+70
+29
+FYZ
+DEa.png
+Odpoveď je na dve platné cifry vo Wattoch.
+ENDS
+28000
+29
+FYZ
+29.png
+Odpovedajte na dve desatinné miesta.
+ENDS
+3.45
+30
+FYZ
+30.png
+Odpovedajte na jedno desatinné miesto.
+ENDS
+416.6
+31
+FYZ
+31.png
+Odpoveď je frekvencia hádzania s presnosťou na jedno desatinné miesto.
+ENDS
+0.6
+31
+FYZ
+31a.png
+Odpovedzte vo formáte <odpoveď pre N=17>a<odpoveď pre N=22> bez medzier.
+ENDS
+1140a190
+31
+FYZ
+DG.png
+Odpoveď je na jednu platnú cifru.
+ENDS
+100000000
+32
+FYZ
+DH.png
+Odpoveď je v stupňoch.
+ENDS
+36
+32
+FYZ
+DHa.png
+Odpovedajte na dve desatinné miesta.
+ENDS
+0.82
+33
+FYZ
+EA.png
+
+ENDS
+2
+33
+FYZ
+33.png
+Odpovedajte na dve desatinné miesta.
+ENDS
+1.08
+34
+FYZ
+EB.png
+Odpovedajte na dve desatinné miesta.
+ENDS
+0.65
+35
+FYZ
+EC.png
+Odpovedajte na dve platné cifry.
+ENDS
+7.2
+35
+FYZ
+35.png
+Odpovedajte na tri desatinné miesta.
+ENDS
+1.755
+36
+FYZ
+ED.png
+Odpovedzte v celých metroch za sekundu.
+ENDS
+234
+37
+FYZ
+37.png
+Odpovedzte v celých metroch.
+ENDS
+1980
+37
+FYZ
+EEa.png
+Odpoveď je v centimetroch na dve desatinné miesta.
+ENDS
+0.14
+38
+FYZ
+38.png
+Odpovedajte na dve desatinné miesta.
+ENDS
+0.69
+39
+FYZ
+EGa.png
+Odpoveď je v nanoAmpéroch
+ENDS
+943
+39
+FYZ
+39a.png
+Odpovedajte v kcal na jedno desatinné miesto.
+ENDS
+2.1
+40
+FYZ
+EH.png
+Odpovedajte v celých newtonoch.
+ENDS
+5
+40
+FYZ
+EHa.png
+Odpoveď je v dňoch s presnosťou na dve desatinné miesta.
+ENDS
+10.53
+40
+FYZ
+40.png
+Odpovedajte v celých mikrometroch.
+ENDS
+105
+42
+FYZ
+FB.png
+Odpoveď je v percentách na jedno desatinné miesto.
+ENDS
+34.4
+43
+FYZ
+FC.png
+Odpovedajte v milimetroch na jedno desatinné miesto.
+ENDS
+4.1
+45
+FYZ
+FE.png
+Odpovedate v mWb na dve desatinné miesta.
+ENDS
+2.78
+47
+FYZ
+FG.png
+Odpoveď je na jedno desatinné miesto.
+ENDS
+4.1
+48
+FYZ
+FH.png
+Odpoveď je na jedno desatinné miesto v J*mol^-1*K^-1
+ENDS
+18
+49
+FYZ
+GA.png
+Odpoveď udajte v celých rokoch na tri platné cifry.
+ENDS
+13300
+50
+FYZ
+GB.png
+ENDP
 ENDU
-1
+5 3 1

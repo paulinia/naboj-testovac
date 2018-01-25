@@ -2,7 +2,7 @@
 
 <div>{{printf "%s" .Statement}}</div>
 
-<img src={{printf "image/%s" .Image}} alt="No image"> 
+<img src={{printf "/image/%s" .Image}} alt="No image"> 
 
 <form action="/evaluate/{{.User}}/{{.Password}}/{{.Id}}" method="POST">
     Odpoveď: <div><input type="text" name="answer"></div>

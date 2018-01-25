@@ -66,7 +66,8 @@ func (a Num) equal(b string) bool {
 
 func (a Float) equal(b string) bool {
 	c := float64(a.x)
-	if math.Abs(c-a.x) < math.Pow(10, -float64(a.precesion)) && math.Abs(c-a.x)/c < math.Pow(10, -float64(a.precesion)) {
+	fmt.Println("Is ", math.Abs(c-a.x), "less than", math.Pow(10, -float64(a.precesion)), "and relative error is ", math.Abs(c-a.x)/c)
+	if math.Abs(c-a.x) < math.Pow(10, -float64(a.precesion))/2 && math.Abs(c-a.x)/c < math.Pow(10, -float64(a.precesion)/2) {
 		return true
 	}
 	return false
@@ -89,6 +90,7 @@ func (a Float) String() string {
 }
 
 func (p Problem) solved(answer string) bool {
+	fmt.Printf("Problem je %v a odpoved %v\n", p.result, answer)
 	if p.result.equal(answer) {
 		return true
 	}

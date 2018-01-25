@@ -13,6 +13,7 @@ func (c *Contest) pointValue(task int, sumbits []Submit) int {
 	fmt.Println(sumbits)
 	cnt := 0
 	for _, s := range sumbits {
+		fmt.Printf("%v ", s.task)
 		if s.task == task {
 			cnt++
 			if s.points > 0 {
@@ -20,6 +21,7 @@ func (c *Contest) pointValue(task int, sumbits []Submit) int {
 			}
 		}
 	}
+	fmt.Println("Pokusov bolo: ", cnt)
 	if cnt > len(c.scoring) {
 		return c.scoring[len(c.scoring)-1]
 	}

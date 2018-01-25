@@ -165,6 +165,7 @@ func (s Scoreboard) write(w *bufio.Writer) {
 func getLine(r *bufio.Reader) string {
 	line, err := r.ReadString('\n')
 	if err != nil {
+		fmt.Println(err.Error())
 		panic(err)
 	}
 	return line[:len(line)-1]
