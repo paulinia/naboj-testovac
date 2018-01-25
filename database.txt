@@ -1,3 +1,15 @@
+V metroch za sekundu.
+ENDS
+3300
+1
+FYZ
+1a.png
+
+ENDS
+20
+2
+FYZ
+2.png
 Malá Janka chce ísť na pláž. K dispozícií má nasledovné rozlíšiteľné plážové outfity: 5 plaviek, 3 slamené klobúky, 4 slnečné okuliare a 5 tričiek. V súlade s pravidlami pláže, musí mať na sebe plavky. Nosenie slnečných okuliarov, klobúka a trička nie je povinné. Avšak na sebe môže mať najviac jeden kus z každého. Koľko je rôznych outfitov, v ktorých Janka môže vyjsť na pláž? 
 ENDS
 600
@@ -172,4 +184,210 @@ ENDS
 47
 MAT
 
+Zaokrúhlite výsledok na celé gramy.
+ENDS
+71
+3
+FYZ
+3.png
+Riešenie v metroch kubických za sekundu na tri významné cifry.
+ENDS
+0.000247
+3
+FYZ
+3a.png
+Odpoveď zadajte v kilogramoch na tri významné cifry.
+ENDS
+788000000000
+4
+4a.png
+Zaokrúhlite na celé metre.
+ENDS
+223
+6
+FYZ
+6.png
+Odpoveď uvádzajte v kilometroch za hodinu na tri významné cifry.
+ENDS
+16.5
+6
+FYZ
+6a.png
+Odpoveď má byť v metroch.
+ENDS
+3
+7
+FYZ
+7.png
+Odpoveď udávajte v centimetroch.
+ENDS
+743
+8
+FYZ
+8a.png
+Odpovedajte v metroch na dve desatinné miesta.
+ENDS
+1.22
+10
+FYZ
+10.png
+Odpoveď uvádzajte v otočeniach za minútu.
+ENDS
+19
+10
+FYZ
+10a.png
+Odpoveď uvádzajte na 2 desatinné miesta v litroch.
+ENDS
+2.97
+11
+FYZ
+11.png
+Určite uhol v stupňoch na dve desatinné miesta.
+ENDS
+26.56
+11
+FYZ
+11a.png
+Odpoveď má byť na 2 desatinné miesta.
+ENDS
+0.75
+13
+FYZ
+13a.png
+Odpovedajte na tri desatinné miesta.
+ENDS
+0.032
+14
+FYZ
+14a.png
+Odpovedajte v Jouloch, zaokrúhlených na celé čísla.
+ENDS
+56
+15
+FYZ
+15.png
+Odpovedajte na dve desatinné miesta.
+ENDS
+0.47
+16
+FYZ
+16.png
+Odpoveď má byť v celých metroch za sekundu.
+ENDS
+14
+17
+FYZ
+17.png
+Odpoveď udávajte v sekundách na 1 desatinné miesto.
+ENDS
+10.8
+18
+FYZ
+18.png
+Odpovedajte na dve desatinné miesta v metroch.
+ENDS
+443.75
+18
+FYZ
+18a.png
+Odpoveď je v celých mililitroch.
+ENDS
+53
+19
+FYZ
+19.png
+ENDS
+0
+20
+FYZ
+20.png
+Odpoveď je v celých centimetroch.
+ENDS
+58
+21
+FYZ
+21.png
+Odpovedajte na dve desatinné miesta.
+ENDS
+1.96
+22
+FYZ
+22.png
+ENDS
+8
+23
+FYZ
+23.png
+Odpovedajte v sekundách s presnosťou na jedno desatinné miesto.
+ENDS
+41.1
+25
+FYZ
+25.png
+Odpoveď je násobok R (ak je odpoveď a*R napíšte a) s presnosťou na 2 desatinné miesta.
+ENDS
+1.62
+27
+FYZ
+27a.png
+Odpoveď je na dve platné cifry vo Wattoch.
+ENDS
+28000
+29
+FYZ
+29.png
+Odpovedajte na dve desatinné miesta.
+ENDS
+3.45
+30
+FYZ
+30.png
+Odpovedajte na jedno desatinné miesto.
+ENDS
+416.6
+31
+FYZ
+31.png
+Odpoveď je frekvencia hádzania s presnosťou na jedno desatinné miesto.
+ENDS
+0.6
+31
+FYZ
+31a.png
+ENDS
+2
+33
+FYZ
+33.png
+Odpovedajte na dve platné cifry.
+ENDS
+7.2
+35
+FYZ
+35.png
+Odpovedzte v celých metroch za sekundu.
+ENDS
+234
+37
+FYZ
+37.png
+Odpoveď je v centimetroch na dve desatinné miesta.
+ENDS
+0.14
+38
+FYZ
+38.png
+Odpoveď je v nanoAmpéroch
+ENDS
+943
+39
+FYZ
+39a.png
+Odpoveď je v dňoch s presnosťou na dve desatinné miesta.
+ENDS
+10.53
+40
+FYZ
+40.png
 END
